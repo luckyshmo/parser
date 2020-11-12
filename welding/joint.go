@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-/** Joint - прдеставление сварного стыка **/
+//Joint - прдеставление сварного стыка
 type Joint struct {
 	number string
 	area   Area

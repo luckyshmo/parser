@@ -14,5 +14,8 @@ func newArea(_name string) Area {
 	}
 }
 
+//Shop - эстакады
 var Shop = newArea("SHOP")
+
+//Field - это кек
 var Field = newArea("FIELD")

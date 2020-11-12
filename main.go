@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	strToArea := map[string]wArea{
+	strToArea := map[string]Area{
 		"SHOP":  Shop,
 		"FIELD": Field,
 	}
