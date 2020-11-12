@@ -1,4 +1,4 @@
-package welding
+package main
 
 // type wArea string //как вариант.
 //Для своих типов мы также может объявлять методы с ресивером.

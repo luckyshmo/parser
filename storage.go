@@ -1,35 +1,35 @@
-package storage
+package main
 
 import (
 	"errors"
 )
 
 type storage interface {
-	insert(j joint) error
+	insert(j Joint) error
 	remove(number string) error
-	get(number string) (joint, error)
+	get(number string) (Joint, error)
 }
 
 type jointStorage struct {
-	data map[string]joint
+	data map[string]Joint
 }
 
 func newJointStorage() *jointStorage {
 	return &jointStorage{
-		data: make(map[string]joint),
+		data: make(map[string]Joint),
 	}
 }
 
-func (js *jointStorage) insert(j joint) error {
+func (js *jointStorage) insert(j Joint) error {
 	js.data[j.number] = j
 
 	return nil
 }
 
-func (js *jointStorage) get(number string) (joint, error) {
+func (js *jointStorage) get(number string) (Joint, error) {
 	j, exists := js.data[number]
 	if !exists {
-		return joint{}, errors.New("No joints with such number")
+		return Joint{}, errors.New("No joints with such number")
 	}
 
 	return j, nil

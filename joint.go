@@ -1,4 +1,4 @@
-package welding
+package main
 
 import (
 	"fmt"
