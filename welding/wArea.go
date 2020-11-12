@@ -3,6 +3,7 @@ package welding
 // type wArea string //как вариант.
 //Для своих типов мы также может объявлять методы с ресивером.
 
+//Area - is welding area of joint
 type Area struct {
 	name string
 }
