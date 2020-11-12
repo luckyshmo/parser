@@ -1,4 +1,4 @@
-package main
+package welding
 
 // type wArea string //как вариант.
 //Для своих типов мы также может объявлять методы с ресивером.
@@ -19,3 +19,9 @@ var Shop = newArea("SHOP")
 
 //Field - это кек
 var Field = newArea("FIELD")
+
+//NameToArea is Map str to area
+var NameToArea = map[string]Area{
+	"SHOP":  Shop,
+	"FIELD": Field,
+}

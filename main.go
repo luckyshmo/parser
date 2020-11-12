@@ -5,12 +5,8 @@ import (
 )
 
 func main() {
-	strToArea := map[string]Area{
-		"SHOP":  Shop,
-		"FIELD": Field,
-	}
 
-	tJoint := newJoint("1", strToArea["SHOP"])
+	tJoint := newJoint("1", NameToArea["SHOP"])
 
 	fmt.Println(tJoint)
 	tJoint.setArea(Field)
