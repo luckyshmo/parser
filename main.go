@@ -2,13 +2,14 @@ package main
 
 import (
 	"fmt"
+	"parser/welding"
 )
 
 func main() {
 
-	tJoint := newJoint("1", NameToArea["SHOP"])
+	tJoint := welding.NewJoint("1", welding.NameToArea["SHOP"])
 
 	fmt.Println(tJoint)
-	tJoint.setArea(Field)
-	fmt.Printf("%s\n", tJoint.getInfo())
+	tJoint.SetArea(welding.Field)
+	fmt.Printf("%s\n", tJoint.GetInfo())
 }

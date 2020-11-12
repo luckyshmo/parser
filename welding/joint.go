@@ -6,21 +6,24 @@ import (
 
 //Joint - прдеставление сварного стыка
 type Joint struct {
-	number string
-	area   Area
+	Number string
+	Area   Area
 }
 
-func newJoint(number string, area Area) Joint {
+//NewJoint ...
+func NewJoint(number string, area Area) Joint {
 	return Joint{
-		number: number,
-		area:   area,
+		Number: number,
+		Area:   area,
 	}
 }
 
-func (j Joint) getInfo() string { //метод структуры //func (s structName) methodName(arg1 type, arg2 type ...) returnType {}
-	return fmt.Sprintf("Стык: %s\nЗона: %s\n", j.number, j.area.name) //возможен ли nullPointer?
+//GetInfo ...
+func (j Joint) GetInfo() string { //метод структуры //func (s structName) methodName(arg1 type, arg2 type ...) returnType {}
+	return fmt.Sprintf("Стык: %s\nЗона: %s\n", j.Number, j.Area.Name) //возможен ли nullPointer?
 }
 
-func (j *Joint) setArea(area Area) { //указатель => работаем не с копией,а по ссылке
-	j.area = area
+//SetArea ...
+func (j *Joint) SetArea(area Area) { //указатель => работаем не с копией,а по ссылке
+	j.Area = area
 }

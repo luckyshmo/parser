@@ -5,20 +5,20 @@ package welding
 
 //Area - is welding area of joint
 type Area struct {
-	name string
+	Name string
 }
 
-func newArea(_name string) Area {
+func NewArea(_name string) Area {
 	return Area{
-		name: _name,
+		Name: _name,
 	}
 }
 
 //Shop - эстакады
-var Shop = newArea("SHOP")
+var Shop = NewArea("SHOP")
 
 //Field - это кек
-var Field = newArea("FIELD")
+var Field = NewArea("FIELD")
 
 //NameToArea is Map str to area
 var NameToArea = map[string]Area{
